@@ -1,0 +1,96 @@
+{
+  "WELCOME": "Welcome to the {{name}} Rest Api",
+
+  "SETUP": {
+    "PREVIOUS": "This was configured before",
+    "CREATED": "Setup, successfully created"
+  },
+
+  "LOGIN": {
+    "FIELDS": "Please provide email and password",
+    "REFRESHTOKEN": "Please provide a valid refresh token",
+    "TOKENEXPIRED": "Token expired",
+    "TOKENEXPIREDORINVALID": "Token expired or invalid",
+    "NOTOKENPROVIDED": "Please provide a valid token",
+    "INVALIDSIGNATURE": "Invalid signature",
+    "STRONGPASSWORD": "Please enter a strong password",
+    "BYE": "Bye"
+  },
+
+  "NAMES": {
+    "USERS": " the users"
+  },
+
+  "NAME": {
+    "USER": " the user",
+    "CONFIG": "the config"
+  },
+
+  "NAMEALONE": {
+    "USER": "user",
+    "CONFIG": "config"
+  },
+
+  "ACTION": {
+    "CHANGE": "change ",
+    "UPDATE": "update ",
+    "DELETE": "delete ",
+    "ADD": "add ",
+    "CREATE": "create ",
+    "SEND": "send "
+  },
+
+  "PAGINATION": {
+    "TOTALDOCS": "totalDocs",
+    "TOTALPAGES": "totalPages",
+    "PAGINGCOUNTER": "pagingCounter",
+    "HASPREVPAGE": "hasPrevPage",
+    "HASNEXTPAGE": "hasNextPage",
+    "PREVPAGE": "prevPage",
+    "NEXTPAGE": "nextPage"
+  },
+
+  "DTO": {
+    "EMAILANDMOBILE": "Please provide a valid email adress or mobile phone number."
+  },
+
+  "NOACCESS": " no access",
+  "NOTFOUND": "No {{name}} found",
+  "VALIDID": "Please enter a valid {{name}} {{field}}.",
+  "VALIDFIELD": "Please enter a valid {{field}}.",
+  "MAXLENGTH": "max length for {{field}} is ({{number}})",
+  "MINLENGTH": "min length for {{field}} is ({{number}}).",
+  "DELETED": "The {{name}} deleted successfully.",
+  "STATUS": "The {{name}} status is {{status}}.",
+  "GENERATEERROR": "{{name}} generation error",
+  "LISTERROR": "You can not list {{name}}",
+  "ISREQUIRED": "{{name}} is required.",
+  "BECAUSE": " because ",
+  "FORTHE": " for the {{name}}",
+  "FROMTHE": " from the {{name}}",
+  "YOUCANNOT": "You can not {{action}}",
+  "SERIALNUMBER": "Serial Number",
+  "DECIMALNUMBER": "Decimal Number",
+  "FIRSTYOUNEEDTOLOGIN": "First you need to login the {{name}}.",
+  "PLEASEENTERSMTELSE": "Please enter something else.",
+  "SENT": "The {{name}} has sent.",
+  "AVAILABLEVALUES": "Available values are {{name}}.",
+  "UNKOWNERROR": "Unknown {{name}} error, please try again later.",
+  "APIKEYISINVALID": "API key is invalid.",
+  "YOUCANNOTDELETESYSUSERS": "You cannot delete system users.",
+  "UPDATEFAILED": "The {{name}} update failed.",
+  "NOTACTIVE": "The {{name}} is not active.",
+  "HEADERREQUIRED": "{{name}} header is mandatory.",
+  "REQOLD": "The request is old",
+  "CANCELLED": "The {{name}} is cancelled.",
+  "TOOMANYCONNECTION": "Too many conections by same IP, please follow-up x-limits and try again after an hour later.",
+  "ALREADY_EXISTS": "{{name}} already exists.",
+
+  "ERROR": {
+    "INTERNALSERVER": "Internal server error",
+    "AUTHFAILED": "Auth failed!",
+    "BADREQUEST": "Bad request!",
+    "NOTALLOWED": "You are not allowed to access this endpoint.",
+    "VALIDATION": "Validation failed!"
+  }
+}

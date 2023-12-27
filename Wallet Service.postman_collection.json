@@ -1,0 +1,4377 @@
+{
+	"info": {
+		"_postman_id": "cd6bfe11-b1f1-44c0-80ae-acda6617417c",
+		"name": "Wallet Service",
+		"description": "``` javascript\n/**\n * @author Deniz Umut dereli\n * @mail denizumutdereli@gmail.com\n * @linkedin denizumutdereli\n * @github denizumutdereli\n * @project Bundesliga Fantasy League Rest API\n * @date 18/02/2022\n * @license MIT Licence\n * \n * This is a demo purpose project.\n * \n **/\n\n```",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "12133068"
+	},
+	"item": [
+		{
+			"name": "Api",
+			"item": [
+				{
+					"name": "Healthcheck",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{walletservice}}",
+							"host": [
+								"{{walletservice}}"
+							],
+							"query": [
+								{
+									"key": "lang",
+									"value": "tr",
+									"disabled": true
+								}
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {all} / Default Welcome\n * @apiName Welcome\n * @apiPermission Guests\n * @apiGroup User\n * \n * @rateLimit 1 Windwos (IP) / Request limit:100 - Default Limit app.js\n * \n * @apiSuccess (200) {Object} mixed object\n * @apiError (404) {Object} {status: true, message: message}\n **/\n\n```"
+					},
+					"response": [
+						{
+							"name": "Healthcheck",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{walletservice}}",
+									"host": [
+										"{{walletservice}}"
+									],
+									"query": [
+										{
+											"key": "lang",
+											"value": "tr",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "53"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "104"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"68-5R8WXCxjT4zle+nZKPTtQk318cM\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:15:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": \"Welcome to the Superpay Wallet Service API\",\n    \"healthcheck\": true,\n    \"version\": \"0.0.1\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Authentication",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin@admin.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "password",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testuse8r@test.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "@Test1234",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{walletservice}}/auth",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"auth"
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {post} /auth Auth user\n * @apiName Auth users\n * @apiPermission JWT / 720 seconds / Active Session - no paralel use\n * @apiGroup User\n *\n * @apiParam  {String} [userName] username\n * @apiParam  {String} [email] password\n * \n * @rateLimit 1 Hour Window (IP) / Request limit:100 JWT 12 minutes\n * \n * @apiSuccess (200) {Object} mixed `JWT token` object\n * @apiError (401) {Object} {status: false, message: message}\n **/\n\n\n```"
+					},
+					"response": [
+						{
+							"name": "Authentication",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin@admin.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "testuse8r@test.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "@Test1234",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{walletservice}}/auth",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "12"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNmMmZhYmJhM2RjMzgwNjI3NzFhYiIsImVtYWlsIjoiYWRtaW5AY3J5cHRvbS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzc1MjE3ODcsImV4cCI6MTY3OTE5OTMxMjc5M30.4yKLPGI9fD9WST71TqTK8ar_fptRkD9J_Ah0mDRE2gI; HttpOnly; Max-Age=[object Object];"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "650"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28a-41unlEAkvk3+B8YfDGbFh9JifVA\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:16:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNmMmZhYmJhM2RjMzgwNjI3NzFhYiIsImVtYWlsIjoiYWRtaW5AY3J5cHRvbS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzc1MjE3ODcsImV4cCI6MTY3OTE5OTMxMjc5M30.4yKLPGI9fD9WST71TqTK8ar_fptRkD9J_Ah0mDRE2gI\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNmMmZhYmJhM2RjMzgwNjI3NzFhYiIsImVtYWlsIjoiYWRtaW5AY3J5cHRvbS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzc1MjE3ODcsImV4cCI6MTY3OTE5OTM5NTU5M30.dWt8PeNLEw2KfYauoUR6jyQHrPvUocMLBobgsU70i7k\",\n        \"expires\": {\n            \"accessToken\": 3600,\n            \"refreshToken\": 86400\n        },\n        \"expiresIn\": {\n            \"accessToken\": 1677525387408,\n            \"refreshToken\": 1677608187408\n        }\n    },\n    \"message\": \"login\"\n}"
+						},
+						{
+							"name": "Validation",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin@admin.com2",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "testuse8r@test.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "@Test1234",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{walletservice}}/auth",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "59"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "94"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5e-0xPYQCzItu8tU1Pnug6nI2Ugc3U\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:16:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"error\": \"email must be an email\",\n    \"internalCode\": 1422,\n    \"detail\": \"\",\n    \"debug\": null\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "email",
+											"value": "admin@admin.com",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "password2",
+											"type": "text"
+										},
+										{
+											"key": "email",
+											"value": "testuse8r@test.com",
+											"type": "text",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "@Test1234",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{walletservice}}/auth",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"auth"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "498"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "37"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "96"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"60-+C9uIUZ4k2cr3OZ5UtDkIJeBu8g\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:17:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"error\": \"Password is not matching\",\n    \"internalCode\": 1401,\n    \"detail\": \"\",\n    \"debug\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Token Refresh",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNmMmZhYmJhM2RjMzgwNjI3NzFhYiIsImVtYWlsIjoiYWRtaW5AY3J5cHRvbS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzc1MjE4NDgsImV4cCI6MTY3OTE5OTQ1NzExNn0.LTN5uru3AqjS-VYg_ipSSRHkwcNGrRicEdwTZ366-Cc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/refresh",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"refresh"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Token Refresh",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{walletservice}}/refresh",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"refresh"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "46"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "Authorization=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNmMmZhYmJhM2RjMzgwNjI3NzFhYiIsImVtYWlsIjoiYWRtaW5AY3J5cHRvbS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzc1MjE5MzMsImV4cCI6MTY3OTE5OTQ1OTEyN30.y5HcbazRPkPb1vV0B4HRlnBQrIMF9Pne5mx-vmG2kRQ; HttpOnly; Max-Age=[object Object];"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "652"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28c-RM9Cj42s/Ixo2IEtSJrd8c92kxw\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:18:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"accessToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNmMmZhYmJhM2RjMzgwNjI3NzFhYiIsImVtYWlsIjoiYWRtaW5AY3J5cHRvbS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzc1MjE5MzMsImV4cCI6MTY3OTE5OTQ1OTEyN30.y5HcbazRPkPb1vV0B4HRlnBQrIMF9Pne5mx-vmG2kRQ\",\n        \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYzZmNmMmZhYmJhM2RjMzgwNjI3NzFhYiIsImVtYWlsIjoiYWRtaW5AY3J5cHRvbS5jb20iLCJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2Nzc1MjE5MzMsImV4cCI6MTY3OTE5OTU0MTkyN30.VcNJwPjCuD-r0wsVVDoSk3SkYJ8G8zWpRBOUdQyPOg0\",\n        \"expires\": {\n            \"accessToken\": 3600,\n            \"refreshToken\": 86400\n        },\n        \"expiresIn\": {\n            \"accessToken\": 1677525533594,\n            \"refreshToken\": 1677608333594\n        }\n    },\n    \"message\": \"refresh\"\n}"
+						},
+						{
+							"name": "Invalid Signature",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{walletservice}}/refresh",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"refresh"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "26"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42a-uKoM+hcjb9ZXl5KHXL3qY8i6xk8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:18:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"internalCode\": 1500,\n    \"detail\": \"invalid signature\",\n    \"debug\": [\n        \"JsonWebTokenError: invalid signature\",\n        \"    at C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\jsonwebtoken\\\\verify.js:171:19\",\n        \"    at getSecret (C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\jsonwebtoken\\\\verify.js:97:14)\",\n        \"    at Object.module.exports [as verify] (C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\jsonwebtoken\\\\verify.js:101:10)\",\n        \"    at decoded (C:\\\\node\\\\product\\\\wallets\\\\src\\\\services\\\\token\\\\token.service.ts:85:13)\",\n        \"    at new Promise (<anonymous>)\",\n        \"    at Service.verifyToken (C:\\\\node\\\\product\\\\wallets\\\\src\\\\services\\\\token\\\\token.service.ts:84:29)\",\n        \"    at TokenValidator.verifyToken (C:\\\\node\\\\product\\\\wallets\\\\src\\\\services\\\\token\\\\token.validator.ts:20:25)\",\n        \"    at authMiddleware (C:\\\\node\\\\product\\\\wallets\\\\src\\\\middlewares\\\\auth.middleware.ts:27:39)\",\n        \"    at Layer.handle [as handle_request] (C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\",\n        \"    at next (C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:144:13)\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Logout",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/logout",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"logout"
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {post} /auth Auth user\n * @apiName Auth users\n * @apiPermission JWT / 720 seconds / Active Session - no paralel use\n * @apiGroup User\n *\n * @apiParam  {String} [userName] username\n * @apiParam  {String} [email] password\n * \n * @rateLimit 1 Hour Window (IP) / Request limit:100 JWT 12 minutes\n * \n * @apiSuccess (200) {Object} mixed `JWT token` object\n * @apiError (401) {Object} {status: false, message: message}\n **/\n\n\n```"
+					},
+					"response": [
+						{
+							"name": "Logout",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{walletservice}}/logout",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "55"
+								},
+								{
+									"key": "Set-Cookie",
+									"value": "Authorization=; Max-age=0"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-d7mTMswuCe8Pgi3ecv0V0YdOraQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:19:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"message\": \"bye\"\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{walletservice}}/logout",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"logout"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "498"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "11"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42a-uKoM+hcjb9ZXl5KHXL3qY8i6xk8\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Content-Encoding",
+									"value": "gzip"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:19:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"internalCode\": 1500,\n    \"detail\": \"invalid signature\",\n    \"debug\": [\n        \"JsonWebTokenError: invalid signature\",\n        \"    at C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\jsonwebtoken\\\\verify.js:171:19\",\n        \"    at getSecret (C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\jsonwebtoken\\\\verify.js:97:14)\",\n        \"    at Object.module.exports [as verify] (C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\jsonwebtoken\\\\verify.js:101:10)\",\n        \"    at decoded (C:\\\\node\\\\product\\\\wallets\\\\src\\\\services\\\\token\\\\token.service.ts:85:13)\",\n        \"    at new Promise (<anonymous>)\",\n        \"    at Service.verifyToken (C:\\\\node\\\\product\\\\wallets\\\\src\\\\services\\\\token\\\\token.service.ts:84:29)\",\n        \"    at TokenValidator.verifyToken (C:\\\\node\\\\product\\\\wallets\\\\src\\\\services\\\\token\\\\token.validator.ts:20:25)\",\n        \"    at authMiddleware (C:\\\\node\\\\product\\\\wallets\\\\src\\\\middlewares\\\\auth.middleware.ts:27:39)\",\n        \"    at Layer.handle [as handle_request] (C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\",\n        \"    at next (C:\\\\node\\\\product\\\\wallets\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:144:13)\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "System Setup",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [
+							{
+								"key": "secret-token",
+								"value": "@1a3d$$*12",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "lang",
+									"value": "en",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{walletservice}}/setup",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"setup"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "System Setup",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "secret-token",
+										"value": "@1a3d$$*12",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "lang",
+											"value": "en",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{walletservice}}/setup",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"setup"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "30"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-FIf+qrn5UIrj76xBfRIpiUBWA8I\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:22:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": \"Setup, successfully created\",\n    \"message\": \"setup\"\n}"
+						},
+						{
+							"name": "Ip Whitelist Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "{{cryptopos}}/setup",
+									"host": [
+										"{{cryptopos}}"
+									],
+									"path": [
+										"setup"
+									]
+								}
+							},
+							"status": "Forbidden",
+							"code": 403,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "RateLimit-Limit",
+									"value": "100"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "99"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "2"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "143"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8f-eGMimqBaod+VnVRlYSd3osh5evo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 22 Sep 2022 10:01:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"error\": \"You are not allowed to access this endpoint.\",\n    \"internalCode\": 1403,\n    \"detail\": \"192.168.169.129 not allowed\",\n    \"debug\": null\n}"
+						},
+						{
+							"name": "Secret Token",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "secret-token",
+										"value": "@1a3d$$*12",
+										"type": "text",
+										"disabled": true
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "lang",
+											"value": "en",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{walletservice}}/setup",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"setup"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "58"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "105"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"69-stzfzNJMT7QYcu0wsnjgJB638kA\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:20:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"error\": \"secret-token header is mandatory.\",\n    \"internalCode\": 1422,\n    \"detail\": \"\",\n    \"debug\": null\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "secret-token",
+										"value": "@1a3d$$*122",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "lang",
+											"value": "en",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{walletservice}}/setup",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"setup"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "498"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "25"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"74-jolXlHtAG5EwUha3hWDkxEVxgR4\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:21:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"error\": \"You are not allowed to access this endpoint.\",\n    \"internalCode\": 1422,\n    \"detail\": \"\",\n    \"debug\": null\n}"
+						},
+						{
+							"name": "Pre-configured",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "secret-token",
+										"value": "@1a3d$$*12",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "lang",
+											"value": "en",
+											"type": "text",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "{{walletservice}}/setup",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"setup"
+									]
+								}
+							},
+							"status": "Unprocessable Entity",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "497"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "13"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "98"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"62-I5BbLHMKrGjacEbnNOdY6oOz2jg\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:21:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"error\": \"This was configured before\",\n    \"internalCode\": 1422,\n    \"detail\": \"\",\n    \"debug\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Config Constants",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{walletservice}}/api/config",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"config"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Config Constants",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{walletservice}}/api/config",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"api",
+										"config"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "498"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "57"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-fQlOLH5qe2f5DGxqGR28ixzhfqo\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:26:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": true,\n    \"data\": {},\n    \"message\": \"config\"\n}"
+						},
+						{
+							"name": "Not Permited",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{walletservice}}/api/config",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"api",
+										"config"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "116"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"74-IjZzK2Thr2ksHuVZkorgXIU6VmQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 27 Feb 2023 18:27:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": false,\n    \"error\": \"You are not allowed to access this endpoint.\",\n    \"internalCode\": 1401,\n    \"detail\": \"\",\n    \"debug\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Search Users/Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/user",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"user"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "642166189d7c34261f761eb0",
+									"disabled": true
+								},
+								{
+									"key": "domain",
+									"value": "6411d3cc086ba9c14a7adc8d",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "testadmin@test.com",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {get} /users /users/account /users/profile\n * @apiName Show Profile - if user.role == admin, list all;\n * @apiPermission JWT Token\n * @apiGroup User\n *\n * @apiParam  {String} [token] token\n * @apiHiddenParam {String} password\n *\n * @rateLimit 1 Hour Window (IP) / Request limit:10 / JWT 12 minutes\n *\n * @apiSuccess (200) {Object} mixed `User` object(s) -> user.role == admin, list all\n * @apiError (200) {Object} {status: false, message: message} //code:0 for I/O signals for demo purpose\n **/\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "User Search Autocomplete Feature",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/user/autocomplete/test",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"autocomplete",
+								"test"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {get} /users /users/account /users/profile\n * @apiName Show Profile - if user.role == admin, list all;\n * @apiPermission JWT Token\n * @apiGroup User\n *\n * @apiParam  {String} [token] token\n * @apiHiddenParam {String} password\n *\n * @rateLimit 1 Hour Window (IP) / Request limit:10 / JWT 12 minutes\n *\n * @apiSuccess (200) {Object} mixed `User` object(s) -> user.role == admin, list all\n * @apiError (200) {Object} {status: false, message: message} //code:0 for I/O signals for demo purpose\n **/\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Me/Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/user/profile",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create Users",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "email",
+									"value": "admin33@cryptom.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Test1234",
+									"type": "text"
+								},
+								{
+									"key": "verifyPassword",
+									"value": "@Test1234",
+									"type": "text"
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE",
+									"type": "text"
+								},
+								{
+									"key": "domain",
+									"value": "642166179d7c34261f761eae",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/user/create",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"create"
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {post} /user /register Create user\n * @apiName Create new users\n * @apiPermission Registration\n * @apiGroup User\n *\n * @apiParam  {String} [userName] username unique\n * @apiParam  {String} [email] password\n * @apiParam  {String} [role] enum [seller, buyer] from Schema\n * \n * @rateLimit 1 Hour Window (IP) / Request limit:100 JWT 12 minutes\n * \n * @apiSuccess (200) {Object} mixed `User` object -> @apiHiddenParam {String} password\n * @apiError (200) {Object} {status: false, message: message}\n **/\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update User Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "INACTIVE2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "testuser2@test.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "@Test1234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "verifyPassword",
+									"value": "@Test12341",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/user/update/642166189d7c34261f761eb4",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"update",
+								"642166189d7c34261f761eb4"
+							]
+						},
+						"description": "``` javascript\n\n/**\n * @api {put} /users/update:user_id\n * @apiName Update user - if user.role == admin, possible to update all;\n * @apiPermission JWT Token\n * @apiGroup User\n *\n * @apiParam  {String} [token] token\n * @apiParam  {String} [password] password - auto hash when update\n * @apiImmutableParam  {String} [role] enum [user, admin] from Schema immutable:true/false\n * @apiImmutableParam {String} [username] username from Schema immutable:true/false\n *\n * @rateLimit 1 Hour Window (IP) / Request limit:10 / JWT 12 minutes\n *\n * @apiFixing if user_id is different then the authenticated user's id,\n * ignoring the user_id parameter and continue with user own id.{userid = username from JWTtoken}\n *\n * @apiSuccess (200) {Object} mixed `User` object\n * @apiError (200) {Object} {status: false, message: message} //code:0 for I/O signals for demo purpose\n **/\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/user/delete/630fb2249b30a3caa7e180c6",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"delete",
+								"630fb2249b30a3caa7e180c6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Domain",
+			"item": [
+				{
+					"name": "Search Domain/s",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/domain",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"domain"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "testadmin@test.com",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "ACTIVE",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": "640438f2d3d7196c1b599377",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "limit",
+									"value": "1",
+									"disabled": true
+								}
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {get} /users /users/account /users/profile\n * @apiName Show Profile - if user.role == admin, list all;\n * @apiPermission JWT Token\n * @apiGroup User\n *\n * @apiParam  {String} [token] token\n * @apiHiddenParam {String} password\n *\n * @rateLimit 1 Hour Window (IP) / Request limit:10 / JWT 12 minutes\n *\n * @apiSuccess (200) {Object} mixed `User` object(s) -> user.role == admin, list all\n * @apiError (200) {Object} {status: false, message: message} //code:0 for I/O signals for demo purpose\n **/\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Domain Search Autocomplete Feature",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/user/autocomplete/tes",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"autocomplete",
+								"tes"
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {get} /users /users/account /users/profile\n * @apiName Show Profile - if user.role == admin, list all;\n * @apiPermission JWT Token\n * @apiGroup User\n *\n * @apiParam  {String} [token] token\n * @apiHiddenParam {String} password\n *\n * @rateLimit 1 Hour Window (IP) / Request limit:10 / JWT 12 minutes\n *\n * @apiSuccess (200) {Object} mixed `User` object(s) -> user.role == admin, list all\n * @apiError (200) {Object} {status: false, message: message} //code:0 for I/O signals for demo purpose\n **/\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "My Domain",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/user/profile",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"user",
+								"profile"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Crate Domain",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Test domain 5\",\r\n    \"callback\": \"http://testurl.com6/..\",\r\n    \"config\": \"{\\\"type\\\":\\\"Check\\\",\\\"mode\\\":\\\"JSON\\\"}\",\r\n    \"status\": \"ACTIVE\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/domain/create",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"domain",
+								"create"
+							]
+						},
+						"description": "``` javascript\n/**\n * @api {post} /user /register Create user\n * @apiName Create new users\n * @apiPermission Registration\n * @apiGroup User\n *\n * @apiParam  {String} [userName] username unique\n * @apiParam  {String} [email] password\n * @apiParam  {String} [role] enum [seller, buyer] from Schema\n * \n * @rateLimit 1 Hour Window (IP) / Request limit:100 JWT 12 minutes\n * \n * @apiSuccess (200) {Object} mixed `User` object -> @apiHiddenParam {String} password\n * @apiError (200) {Object} {status: false, message: message}\n **/\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Update Domain Profile",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "status",
+									"value": "INACTIVE2",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "role",
+									"value": "user",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "testuser1@test.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "@Test1234",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/domain/update/6422cd8fd1269aeb9cb025b4",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"domain",
+								"update",
+								"6422cd8fd1269aeb9cb025b4"
+							]
+						},
+						"description": "``` javascript\n\n/**\n * @api {put} /users/update:user_id\n * @apiName Update user - if user.role == admin, possible to update all;\n * @apiPermission JWT Token\n * @apiGroup User\n *\n * @apiParam  {String} [token] token\n * @apiParam  {String} [password] password - auto hash when update\n * @apiImmutableParam  {String} [role] enum [user, admin] from Schema immutable:true/false\n * @apiImmutableParam {String} [username] username from Schema immutable:true/false\n *\n * @rateLimit 1 Hour Window (IP) / Request limit:10 / JWT 12 minutes\n *\n * @apiFixing if user_id is different then the authenticated user's id,\n * ignoring the user_id parameter and continue with user own id.{userid = username from JWTtoken}\n *\n * @apiSuccess (200) {Object} mixed `User` object\n * @apiError (200) {Object} {status: false, message: message} //code:0 for I/O signals for demo purpose\n **/\n\n```"
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Domain",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/domain/delete/6405851a7b00583a1bbab01d",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"domain",
+								"delete",
+								"6405851a7b00583a1bbab01d"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Wallet",
+			"item": [
+				{
+					"name": "Create Wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"6435dc5a06a8ae7ee2869aa1\",\r\n    \"network\":\"Tron\",\r\n    \"testnet\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/wallet",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Customer's Wallets -All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/wallet/6435dc5a06a8ae7ee2869aa0",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"wallet",
+								"6435dc5a06a8ae7ee2869aa0"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Customer's Wallets -All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{walletservice}}/api/wallet/6435dc5a06a8ae7ee2869aa0",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"api",
+										"wallet",
+										"6435dc5a06a8ae7ee2869aa0"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "498"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "48"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "375"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"177-SnJxoeNj236Hx1v+QCYf7wNF7BY\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Apr 2023 08:49:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"customerId\": \"6435dc5a06a8ae7ee2869aa0\",\n            \"testnet\": false,\n            \"network\": \"Tron\",\n            \"address\": \"TBCjFFBKGwfbsBYFpiJahv4Dd2ZMjEGUir\",\n            \"mainWallet\": \"643fa41b458c843b87d0cfb6\"\n        },\n        {\n            \"customerId\": \"6435dc5a06a8ae7ee2869aa0\",\n            \"testnet\": false,\n            \"network\": \"Ethereum\",\n            \"address\": \"0xa529566b353ab7a8cda516e9a7d2ebb69e0f845a\",\n            \"mainWallet\": \"643faaaf0a58b1301d37ec48\"\n        }\n    ],\n    \"message\": \"customer wallets\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Network Wallets -All",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/wallet/Tron/false",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"wallet",
+								"Tron",
+								"false"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get Network Wallets -All",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{walletservice}}/api/wallet/Tron/false",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"api",
+										"wallet",
+										"Tron",
+										"false"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "496"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "25"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "363"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16b-x7jnUiCEXZAGOG+JgRHLYY+rC3Q\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Apr 2023 08:49:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"customerId\": \"6435dc5a06a8ae7ee2869aa0\",\n            \"testnet\": false,\n            \"network\": \"Tron\",\n            \"address\": \"TBCjFFBKGwfbsBYFpiJahv4Dd2ZMjEGUir\",\n            \"mainWallet\": \"643fa41b458c843b87d0cfb6\"\n        },\n        {\n            \"customerId\": \"6435dc5a06a8ae7ee2869aa1\",\n            \"testnet\": false,\n            \"network\": \"Tron\",\n            \"address\": \"TBBGCK2qaAQj6NQM9nRCfpjNVGLdBeE2eQ\",\n            \"mainWallet\": \"643fa422458c843b87d0cfba\"\n        }\n    ],\n    \"message\": \"customer wallets\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Public Address",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"6435dc5a06a8ae7ee2869aa0\",\r\n    \"network\":\"Tron\",\r\n    \"testnet\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/wallet/address",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"wallet",
+								"address"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Public Address",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"customerId\":\"6435dc5a06a8ae7ee2869aa0\",\r\n    \"network\":\"Ethereum\",\r\n    \"testnet\":\"false\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{walletservice}}/api/wallet/address",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"api",
+										"wallet",
+										"address"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "495"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "14"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "201"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"c9-+jwiEMk0KdAV70PehelyHszA3/g\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Apr 2023 08:50:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"customerId\": \"6435dc5a06a8ae7ee2869aa0\",\n        \"testnet\": false,\n        \"network\": \"Ethereum\",\n        \"address\": \"0xa529566b353ab7a8cda516e9a7d2ebb69e0f845a\",\n        \"mainWallet\": \"643faaaf0a58b1301d37ec48\"\n    },\n    \"message\": \"wallet\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Search Wallets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/wallet?network=Tron",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"wallet"
+							],
+							"query": [
+								{
+									"key": "network",
+									"value": "Tron"
+								},
+								{
+									"key": "testnet2",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Wallets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{walletservice}}/api/wallet?network=Tron",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"api",
+										"wallet"
+									],
+									"query": [
+										{
+											"key": "network",
+											"value": "Tron"
+										},
+										{
+											"key": "testnet2",
+											"value": "false",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "59"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "496"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f0-HaXgM8uLWK7xQFztDStVnXybiJM\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Apr 2023 08:50:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"result\": {\n            \"docs\": [\n                {\n                    \"id\": \"643fa5f35934091b298cc157\",\n                    \"address\": \"TBCjFFBKGwfbsBYFpiJahv4Dd2ZMjEGUir\",\n                    \"mainWallet\": \"643fa41b458c843b87d0cfb6\",\n                    \"network\": \"Tron\",\n                    \"testnet\": false\n                },\n                {\n                    \"id\": \"643fab000a58b1301d37ec62\",\n                    \"address\": \"TBBGCK2qaAQj6NQM9nRCfpjNVGLdBeE2eQ\",\n                    \"mainWallet\": \"643fa422458c843b87d0cfba\",\n                    \"network\": \"Tron\",\n                    \"testnet\": false\n                }\n            ],\n            \"totalDocs\": 2,\n            \"limit\": 10,\n            \"totalPages\": 1,\n            \"page\": 1,\n            \"pagingCounter\": 1,\n            \"hasPrevPage\": false,\n            \"hasNextPage\": false,\n            \"prevPage\": null,\n            \"nextPage\": null\n        }\n    },\n    \"message\": \"search\"\n}"
+						}
+					]
+				},
+				{
+					"name": "GetBalance -Disabled",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"6435dc5a06a8ae7ee2869aa0\",\r\n    \"network\":\"Ethereum\",\r\n    \"testnet\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/wallet/balance",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"wallet",
+								"balance"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Subscribe / Tatum VA -Disabled",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"customerId\":\"6435dc5a06a8ae7ee2869aa0\",\r\n    \"network\":\"Ethereum\",\r\n    \"testnet\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/wallet/subscribe",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"wallet",
+								"subscribe"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "HD Wallet",
+			"item": [
+				{
+					"name": "Search Main Wallets",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/external-wallet",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"external-wallet"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "643bd35bdb0fab5cc84ac9d5",
+									"disabled": true
+								},
+								{
+									"key": "user",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "domain",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "network",
+									"value": "Tron",
+									"disabled": true
+								},
+								{
+									"key": "testnet",
+									"value": "false",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Search Main Wallets",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{walletservice}}/api/external-wallet",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"api",
+										"external-wallet"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "643bd35bdb0fab5cc84ac9d5",
+											"disabled": true
+										},
+										{
+											"key": "user",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "domain",
+											"value": "",
+											"disabled": true
+										},
+										{
+											"key": "network",
+											"value": "Tron",
+											"disabled": true
+										},
+										{
+											"key": "testnet",
+											"value": "false",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "29"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "660"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"294-tNQIiZDj67o3sNiDhkbnv50TOVQ\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Apr 2023 08:48:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"result\": {\n            \"docs\": [\n                {\n                    \"id\": \"643fa41b458c843b87d0cfb6\",\n                    \"domain\": \"643bc97176ea68d225005d10\",\n                    \"indexesCreated\": 1,\n                    \"network\": \"Tron\",\n                    \"testnet\": false,\n                    \"user\": \"643bc97176ea68d225005d13\"\n                },\n                {\n                    \"id\": \"643fa422458c843b87d0cfba\",\n                    \"domain\": \"643bc97176ea68d225005d10\",\n                    \"indexesCreated\": 0,\n                    \"network\": \"Tron\",\n                    \"testnet\": false,\n                    \"user\": \"643bc97176ea68d225005d13\"\n                },\n                {\n                    \"id\": \"643faaaf0a58b1301d37ec48\",\n                    \"domain\": \"643bc97176ea68d225005d10\",\n                    \"indexesCreated\": 1,\n                    \"network\": \"Ethereum\",\n                    \"testnet\": false,\n                    \"user\": \"643bc97176ea68d225005d13\"\n                }\n            ],\n            \"totalDocs\": 3,\n            \"limit\": 10,\n            \"totalPages\": 1,\n            \"page\": 1,\n            \"pagingCounter\": 1,\n            \"hasPrevPage\": false,\n            \"hasNextPage\": false,\n            \"prevPage\": null,\n            \"nextPage\": null\n        }\n    },\n    \"message\": \"search\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Main Wallet",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"network\":\"Bitcoin\",\r\n    \"testnet\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/external-wallet",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"external-wallet"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Main Wallet",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"network\":\"Ethereum\",\r\n    \"testnet\":\"false\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{walletservice}}/api/external-wallet",
+									"host": [
+										"{{walletservice}}"
+									],
+									"path": [
+										"api",
+										"external-wallet"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Credentials",
+									"value": "true"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;form-action 'self';frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "Cross-Origin-Embedder-Policy",
+									"value": "require-corp"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Resource-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Origin-Agent-Cluster",
+									"value": "?1"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "RateLimit-Limit",
+									"value": "500"
+								},
+								{
+									"key": "RateLimit-Remaining",
+									"value": "499"
+								},
+								{
+									"key": "RateLimit-Reset",
+									"value": "35"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "351"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"15f-Lp3F9J3+7nRNTDg9p+uaj+Bq0eg\""
+								},
+								{
+									"key": "Vary",
+									"value": "Accept-Encoding"
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 19 Apr 2023 08:47:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"643faaaf0a58b1301d37ec48\",\n        \"deleted\": false,\n        \"domain\": \"643bc97176ea68d225005d10\",\n        \"indexesCreated\": 0,\n        \"mnemonic\": \"*****************\",\n        \"network\": \"Ethereum\",\n        \"testnet\": false,\n        \"user\": \"643bc97176ea68d225005d13\",\n        \"xpub\": \"*****************\",\n        \"createdAt\": \"2023-04-19T08:47:43.901Z\",\n        \"updatedAt\": \"2023-04-19T08:47:43.901Z\"\n    },\n    \"message\": \"create main wallet\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Main Node Wallet - Disabled",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"network\":\"Ethereum\",\r\n    \"testnet\":\"true\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/node-wallet",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"node-wallet"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Virtual Account",
+			"item": [
+				{
+					"name": "Create Virtual Account",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"6435dc5a06a8ae7ee2869aa0\",\r\n    \"domain\":\"6435dc5906a8ae7ee2869a9d\",\r\n    \"network\":\"Tron\",\r\n    \"testnet\":\"true\",\r\n    \"currency\":\"TRON\",\r\n    \"accountingCurrency\":\"TRY\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/virtual-wallet",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"virtual-wallet"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Engage User Wallet to VA",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{adminToken}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"user\": \"6435dc5a06a8ae7ee2869aa0\",\r\n    \"domain\":\"6435dc5906a8ae7ee2869a9d\",\r\n    \"customerId\":\"6435dc5a06a8ae7ee2869aa0\",\r\n    \"network\":\"Bitcoin\",\r\n    \"testnet\":\"false\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{walletservice}}/api/virtual-wallet/engage",
+							"host": [
+								"{{walletservice}}"
+							],
+							"path": [
+								"api",
+								"virtual-wallet",
+								"engage"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "boilerplateapi",
+			"value": "http://localhost:3000"
+		}
+	]
+}

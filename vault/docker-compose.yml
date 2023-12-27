@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  vault:
+    image: vault:latest
+    container_name: vault
+    ports:
+      - "8200:8200"
+    environment:
+      - VAULT_ADDR=http://127.0.0.1:8200
+      - VAULT_API_ADDR=http://vault:8200
+    cap_add:
+      - IPC_LOCK
+    command: server -config=/vault/config/vault-config.json
+    volumes:
+      - vault_data:/vault/file
+      - ./vault-config.json:/vault/config/vault-config.json
+    restart: always
+
+volumes:
+  vault_data:
