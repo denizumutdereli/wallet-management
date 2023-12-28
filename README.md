@@ -2,7 +2,7 @@
 
 ## Overview
 
-This project is an extensive API model developed in TypeScript for managing Crypto HD Wallets, utilizing TatumIO for custodial type services. It strictly adheres to the BIP44 standard and uses mnemonics for seeding wallets. The system features a domain-specific namespace for creating main HD wallets attached to domains. Data storage is handled by MongoDB with encryption for security.
+This project is an extensive API model developed in TypeScript for managing Crypto HD Wallets, utilizing TatumIO for custodial type services. It strictly adheres to the BIP39-44 standards and uses mnemonics for seeding wallets. The system features a domain-specific namespace for creating main HD wallets attached to domains. Data storage is handled by MongoDB with encryption for security.
 
 ## Key Features
 
